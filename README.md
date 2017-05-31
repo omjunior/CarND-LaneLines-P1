@@ -85,14 +85,15 @@ car is over a line the algorithm will have a hard time finding these lines.
 If one wants to restrict certain tones of lines (only white or yellow) color masking can be helpful to find the lines. But as many places have different
 conventions, I decided not to go with this approach.
 
-To overcome the fixed region of interest problem, it could be possible to try to find some 'significant' lines, choose them by some kind of voting,
-then remove outliers until two main lines are found.
+To overcome the fixed region of interest problem, it could be possible to try to find some 'significant' lines
+(maybe the ones that meet on a plausible region), then remove outliers until only two main lines remain.
 It also could be useful to use the latest frames since things do not change much from frame to frame.
 
-Also, as I do not have much knowledge of image processing, there might be a color representation scheme such as YUV or YCbCr that might perform better
+Also, as I do not have much knowledge of image processing, there might be a color representation scheme such as YUV or YCbCr that could perform better
 with the edges detection algorithm.
 
-Finally, this algorithm is very dependent on the several parameters that were 'cooked' for these examples.
+Finally, this algorithm is very dependent on the several parameters that were 'cooked' for these examples, which might not
+be particularly good for a general case.
 
 
 
